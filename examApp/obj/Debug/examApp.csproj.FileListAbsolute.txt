@@ -1,0 +1,16 @@
+C:\Users\anast\Source\Repos\damnExam2\examApp\bin\Debug\examApp.exe.config
+C:\Users\anast\Source\Repos\damnExam2\examApp\bin\Debug\examApp.exe
+C:\Users\anast\Source\Repos\damnExam2\examApp\bin\Debug\examApp.pdb
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.csproj.AssemblyReference.cache
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\MainWindow.g.cs
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\App.g.cs
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp_MarkupCompile.cache
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp_MarkupCompile.lref
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\MainWindow.baml
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.g.resources
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.Properties.Resources.resources
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.csproj.GenerateResource.cache
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.csproj.CoreCompileInputs.cache
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.exe
+C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.pdb
