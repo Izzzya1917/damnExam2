@@ -14,6 +14,10 @@ namespace examApp
     /// </summary>
     public partial class App : Application
     {
+       private  Core db = new Core();   
+
         public static Users CurrentUser = null;
+        public static List<Items> orderList = new List<Items>();
+
     }
 }

@@ -22,3 +22,5 @@ C:\Users\anast\source\repos\damnExam2\examApp\bin\Debug\EntityFramework.dll
 C:\Users\anast\source\repos\damnExam2\examApp\bin\Debug\EntityFramework.xml
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\examApp_Content.g.cs
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\examApp.csproj.CopyComplete
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\orderPage.g.cs
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\orderPage.baml

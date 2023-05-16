@@ -1,4 +1,5 @@
-﻿using System;
+﻿using examApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,35 +13,39 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using examApp.Models;
 
 namespace examApp.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for CatalogPage.xaml
+    /// Interaction logic for orderPage.xaml
     /// </summary>
-    public partial class CatalogPage : Page
+    public partial class orderPage : Page
     {
 
         Core db = new Core();
         List<Items> arrayItems;
-        public CatalogPage()
+        public orderPage()
         {
             InitializeComponent();
             arrayItems = db.context.Items.ToList();
-            CatalogListView.ItemsSource = arrayItems;
+            CatalogListView.ItemsSource = App.orderList;
+            orderTB.Text+=generateOrderNum();
         }
 
-
-        private void addToCartBtnClick(object sender, RoutedEventArgs e)
+        private void removeBtnClick(object sender, RoutedEventArgs e)
         {
-            Items selectedItem = (Items)((Button)sender).DataContext;
-            App.orderList.Add(selectedItem);
+
         }
 
-        private void orderBtnClick(object sender, RoutedEventArgs e)
+        private void buyBtnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new orderPage());
+
+        }
+
+        private int generateOrderNum () {
+            List<Orders> orders = db.context.Orders.ToList();
+            int lastOrder = orders.Count+1;
+            return lastOrder++;
         }
     }
 }
