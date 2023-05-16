@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5e752c692faa412ab55c6b66e799ce71" Name="Diagram1">
-        <EntityTypeShape EntityType="ExamDBModel.Items" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.Manufacturers" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.orderGiveaway" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.Orders" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.orderStatuses" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.Roles" Width="1.5" PointX="2.75" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.SoldItems" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ExamDBModel.Users" Width="1.5" PointX="5" PointY="4.875" IsExpanded="true" />
-        <AssociationConnector Association="ExamDBModel.FK_Items_Manufacturers" ManuallyRouted="false" />
-        <AssociationConnector Association="ExamDBModel.FK_SoldItems_Items" ManuallyRouted="false" />
-        <AssociationConnector Association="ExamDBModel.FK_Orders_orderGiveaway" ManuallyRouted="false" />
-        <AssociationConnector Association="ExamDBModel.FK_Orders_orderStatuses" ManuallyRouted="false" />
-        <AssociationConnector Association="ExamDBModel.FK_SoldItems_Orders" ManuallyRouted="false" />
-        <AssociationConnector Association="ExamDBModel.FK_Users_Roles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ExamDBModel.Items" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="ExamDBModel.Manufacturers" Width="1.5" PointX="0.75" PointY="9.625" />
+        <EntityTypeShape EntityType="ExamDBModel.orderGiveaway" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="ExamDBModel.Orders" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ExamDBModel.orderStatuses" Width="1.5" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="ExamDBModel.Roles" Width="1.5" PointX="2.75" PointY="5.25" />
+        <EntityTypeShape EntityType="ExamDBModel.SoldItems" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="ExamDBModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ExamDBModel.Users" Width="1.5" PointX="5" PointY="4.875" />
+        <AssociationConnector Association="ExamDBModel.FK_Items_Manufacturers" />
+        <AssociationConnector Association="ExamDBModel.FK_SoldItems_Items" />
+        <AssociationConnector Association="ExamDBModel.FK_Orders_orderGiveaway" />
+        <AssociationConnector Association="ExamDBModel.FK_Orders_orderStatuses" />
+        <AssociationConnector Association="ExamDBModel.FK_SoldItems_Orders" />
+        <AssociationConnector Association="ExamDBModel.FK_Users_Roles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

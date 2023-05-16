@@ -7,11 +7,11 @@
     <Property Name="itemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="itemName" Type="nvarchar" MaxLength="50" />
     <Property Name="itemCount" Type="int" />
-    <Property Name="itemImage" Type="image" />
     <Property Name="itemDescription" Type="nvarchar" MaxLength="100" />
     <Property Name="itemPrice" Type="int" />
     <Property Name="itemDiscount" Type="float" />
-    <Property Name="itemManufacturerId" Type="int" Nullable="false" />
+    <Property Name="itemManufacturerId" Type="int" />
+    <Property Name="itemImage" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Manufacturers">
     <Key>
@@ -83,7 +83,7 @@
     <Property Name="userRoleId" Type="int" />
   </EntityType>
   <Association Name="FK_Items_Manufacturers">
-    <End Role="Manufacturers" Type="Self.Manufacturers" Multiplicity="1" />
+    <End Role="Manufacturers" Type="Self.Manufacturers" Multiplicity="0..1" />
     <End Role="Items" Type="Self.Items" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Manufacturers">

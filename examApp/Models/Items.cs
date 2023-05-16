@@ -22,11 +22,11 @@ namespace examApp.Models
         public int itemId { get; set; }
         public string itemName { get; set; }
         public Nullable<int> itemCount { get; set; }
-        public byte[] itemImage { get; set; }
         public string itemDescription { get; set; }
         public Nullable<int> itemPrice { get; set; }
         public Nullable<double> itemDiscount { get; set; }
-        public int itemManufacturerId { get; set; }
+        public Nullable<int> itemManufacturerId { get; set; }
+        public string itemImage { get; set; }
     
         public virtual Manufacturers Manufacturers { get; set; }
         public virtual ICollection<SoldItems> SoldItems { get; set; }
