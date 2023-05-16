@@ -13,7 +13,8 @@
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal" Grid.Row="0" >
 			<Button x:Name="backBtn" Content="Nazad" Height="50" Width="100" Click="backBtnClick"/>
-		</StackPanel>
+            <Button x:Name="authBtn" Content="Auth" Height="50" Width="100" Click="authBtnClick" HorizontalAlignment="Right"/>
+        </StackPanel>
 		<Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 	</Grid>
 </Window>

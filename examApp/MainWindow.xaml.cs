@@ -24,7 +24,7 @@ namespace examApp
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthPage());
+            MainFrame.Navigate(new CatalogPage());
         }
 
         private void backBtnClick(object sender, RoutedEventArgs e)
@@ -33,6 +33,11 @@ namespace examApp
             {
                 MainFrame.GoBack();
             }
+        }
+
+        private void authBtnClick(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AuthPage());
         }
     }
 }

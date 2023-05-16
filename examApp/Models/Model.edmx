@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ExamDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ExamDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Items">
           <Key>
             <PropertyRef Name="itemId" />
@@ -193,8 +193,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ExamDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -237,7 +236,7 @@
           <Property Name="orderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="orderStatusId" Type="Int32" />
           <Property Name="orderPlaceId" Type="Int32" />
-          <Property Name="orderDate" Type="DateTime" />
+          <Property Name="orderDate" Type="DateTime" Precision="3" />
           <Property Name="orderCode" Type="Int32" />
           <Property Name="orderDelievery" Type="Int32" />
           <NavigationProperty Name="orderGiveaway" Relationship="Self.FK_Orders_orderGiveaway" FromRole="Orders" ToRole="orderGiveaway" />
@@ -363,7 +362,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ExamDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="ExamDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Items" EntityType="Self.Items" />
           <EntitySet Name="Manufacturers" EntityType="Self.Manufacturers" />
           <EntitySet Name="orderGiveaway" EntityType="Self.orderGiveaway" />
@@ -403,7 +402,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ExamDBModelStoreContainer" CdmEntityContainer="ExamDBEntities">
+        <EntityContainerMapping StorageEntityContainer="ExamDBModelStoreContainer" CdmEntityContainer="ExamDBEntities1">
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="ExamDBModel.Items">
               <MappingFragment StoreEntitySet="Items">
@@ -510,7 +509,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

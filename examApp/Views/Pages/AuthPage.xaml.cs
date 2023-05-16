@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using examApp.Models;
 
 namespace examApp.Views.Pages
 {
@@ -23,6 +24,47 @@ namespace examApp.Views.Pages
         public AuthPage()
         {
             InitializeComponent();
+            loginTB.Focus();
+        }
+
+
+
+
+        private void loginBtnClick(object sender, RoutedEventArgs e)
+        {
+            try {
+                login(loginTB.Text, passwordPB.Password);
+            } catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+            
+            //тут авторизация
+        }
+
+        private void guestBtnClick(object sender, RoutedEventArgs e)
+        {
+            //тут просто скипаем и идём смотреть товары
+            NavigationService.Navigate(new CatalogPage());
+        }
+
+        //авторизация
+        private Boolean login(string login, string password)
+        {
+            Core db = new Core();
+            List<Roles> arrayRoles;
+            arrayRoles = db.context.Roles.ToList(); 
+            if (String.IsNullOrEmpty(login) && String.IsNullOrEmpty(password)) {
+                throw new Exception("Пусто!");
+            }
+            if ((db.context.Users.Where(x => x.userLogin == login).FirstOrDefault() != null)
+                && (db.context.Users.Where(x => x.userPassword == password).FirstOrDefault() != null))
+            {
+                App.CurrentUser = db.context.Users.Where(x => x.userLogin == login).FirstOrDefault();
+                MessageBox.Show("Вас зовут " + App.CurrentUser.userName + ", "
+                    + "Вы - " + arrayRoles[Convert.ToInt32(App.CurrentUser.userRoleId)-1].roleName);
+            }
+            else throw new Exception("Аккаунт не найден!");
+            return true;
         }
     }
 }

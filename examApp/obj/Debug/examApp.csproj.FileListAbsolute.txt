@@ -16,3 +16,9 @@ C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.exe
 C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.pdb
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\AuthPage.g.cs
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\AuthPage.baml
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\CatalogPage.g.cs
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\CatalogPage.baml
+C:\Users\anast\source\repos\damnExam2\examApp\bin\Debug\EntityFramework.dll
+C:\Users\anast\source\repos\damnExam2\examApp\bin\Debug\EntityFramework.xml
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\examApp_Content.g.cs
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\examApp.csproj.CopyComplete
