@@ -53,7 +53,9 @@ namespace examApp.Views.Pages
             Core db = new Core();
             List<Roles> arrayRoles;
             arrayRoles = db.context.Roles.ToList(); 
-            if (String.IsNullOrEmpty(login) && String.IsNullOrEmpty(password)) {
+
+
+            if (String.IsNullOrEmpty(login) || String.IsNullOrEmpty(password)) {
                 throw new Exception("Пусто!");
             }
             if ((db.context.Users.Where(x => x.userLogin == login).FirstOrDefault() != null)
@@ -62,9 +64,10 @@ namespace examApp.Views.Pages
                 App.CurrentUser = db.context.Users.Where(x => x.userLogin == login).FirstOrDefault();
                 MessageBox.Show("Вас зовут " + App.CurrentUser.userName + ", "
                     + "Вы - " + arrayRoles[Convert.ToInt32(App.CurrentUser.userRoleId)-1].roleName);
+                return true;
             }
             else throw new Exception("Аккаунт не найден!");
-            return true;
+            
         }
     }
 }

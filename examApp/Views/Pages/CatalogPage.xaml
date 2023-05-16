@@ -21,10 +21,11 @@
                     <Grid>
                         <StackPanel Orientation="Horizontal">
                             <Image Source="{Binding itemImage}" Width="100" Height="100"/>
-                            <TextBlock Text="{Binding itemName}"/>
+                            <TextBlock Text="{Binding itemName}" Margin="10 0"/>
+                            <TextBlock Text="{Binding itemDescription}"/>
                             <TextBlock Text="{Binding itemPrice}" Margin="10 0"/>
                             <TextBlock Text="рублей" />
-                            <Button x:Name="addToCartBtn" Click="addToCartBtnClick" Content="добавить в заказ"/>
+                            <Button x:Name="addToCartBtn" Click="addToCartBtnClick" Content="добавить в заказ" Margin="10"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
