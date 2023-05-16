@@ -15,7 +15,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="orderTB" Text="Заказ № " Grid.Row="0" FontSize="24"/>
-        <ListView Grid.Row="1" Name="CatalogListView">
+        <ListView Grid.Row="1" Name="orderListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>

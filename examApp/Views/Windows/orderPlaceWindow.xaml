@@ -1,0 +1,17 @@
+﻿<Window x:Class="examApp.Views.Windows.orderPlaceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examApp.Views.Windows"
+        mc:Ignorable="d"
+        Title="Выберите пункт выдачи заказа!" Height="250" Width="500">
+    <Grid>
+        <StackPanel>
+            <TextBlock>Выберите пункт выдачии заказа:</TextBlock>
+            <ComboBox Name="delieveryCB" Margin="10">
+            </ComboBox>
+            <Button x:Name="selectPlaceBtn" Content="ОК" Click="selectPlaceBtnClick"/>
+        </StackPanel>
+    </Grid>
+</Window>

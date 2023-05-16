@@ -24,3 +24,5 @@ C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\examApp_Content.g.cs
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\examApp.csproj.CopyComplete
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\orderPage.g.cs
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\orderPage.baml
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Windows\orderPlaceWindow.g.cs
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Windows\orderPlaceWindow.baml

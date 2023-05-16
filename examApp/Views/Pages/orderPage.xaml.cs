@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using examApp.Views.Windows;
 
 namespace examApp.Views.Pages
 {
@@ -22,30 +23,52 @@ namespace examApp.Views.Pages
     public partial class orderPage : Page
     {
 
-        Core db = new Core();
-        List<Items> arrayItems;
+        Core db = new Core(); 
         public orderPage()
         {
             InitializeComponent();
-            arrayItems = db.context.Items.ToList();
-            CatalogListView.ItemsSource = App.orderList;
+            orderListView.ItemsSource = App.orderList;
             orderTB.Text+=generateOrderNum();
+            
         }
 
         private void removeBtnClick(object sender, RoutedEventArgs e)
         {
-
+            Items selectedItem = (Items)((Button)sender).DataContext;
+            App.orderList.Remove(selectedItem);
+            orderListView.ItemsSource = App.orderList;
         }
 
         private void buyBtnClick(object sender, RoutedEventArgs e)
         {
+            orderPlaceWindow orderPlaceWindow = new orderPlaceWindow();
 
+            orderPlaceWindow.ShowDialog();
+            /*
+            Orders newOrder= new Orders()
+                {
+                    orderId = generateOrderNum(),
+                    orderStatusId = 1,
+                    orderPlaceId = 1,
+                    orderDate = DateTime.Now,
+                    orderCode = generateOrderCode(),
+                    orderDelievery = 1
+                };
+                db.context.Orders.Add(newOrder);
+                db.context.SaveChanges();
+            MessageBox.Show("Заказ оформлен!");*/
         }
 
         private int generateOrderNum () {
             List<Orders> orders = db.context.Orders.ToList();
             int lastOrder = orders.Count+1;
             return lastOrder++;
+        }
+
+        private int generateOrderCode()
+        {
+            Random rnd = new Random();  
+            return rnd.Next(100, 999);
         }
     }
 }
