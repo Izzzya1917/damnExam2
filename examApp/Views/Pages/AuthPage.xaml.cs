@@ -12,27 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using examApp.Views.Pages;
 
-namespace examApp
+namespace examApp.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AuthPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AuthPage : Page
     {
-        public MainWindow()
+        public AuthPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new AuthPage());
-        }
-
-        private void backBtnClick(object sender, RoutedEventArgs e)
-        {
-            if (MainFrame.CanGoBack)
-            {
-                MainFrame.GoBack();
-            }
         }
     }
 }

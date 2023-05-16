@@ -14,3 +14,5 @@ C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.csproj.GenerateR
 C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.csproj.CoreCompileInputs.cache
 C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.exe
 C:\Users\anast\Source\Repos\damnExam2\examApp\obj\Debug\examApp.pdb
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\AuthPage.g.cs
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\AuthPage.baml
