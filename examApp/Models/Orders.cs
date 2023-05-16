@@ -25,6 +25,7 @@ namespace examApp.Models
         public Nullable<System.DateTime> orderDate { get; set; }
         public Nullable<int> orderCode { get; set; }
         public Nullable<int> orderDelievery { get; set; }
+        public Nullable<int> orderPrice { get; set; }
     
         public virtual orderGiveaway orderGiveaway { get; set; }
         public virtual orderStatuses orderStatuses { get; set; }

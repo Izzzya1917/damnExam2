@@ -1,0 +1,27 @@
+﻿<Window x:Class="examApp.Views.Windows.talonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examApp.Views.Windows"
+        mc:Ignorable="d"
+        Title="ТАЛОН ДЛЯ ЗАКАЗА" MinHeight="600" Width="800"
+        MaxHeight="1080">
+    <Grid>
+        <StackPanel>
+            <TextBlock FontSize="36">Важная информация для получения!</TextBlock>
+            <TextBlock FontSize="26">Дата оформления заказа:</TextBlock>
+            <TextBlock FontSize="36" Name="dateTB"/>
+            <TextBlock FontSize="26">Срок доставки: </TextBlock>
+            <TextBlock FontSize="36" Name="delieveryTB"/>
+            <TextBlock FontSize="26">Ваш пункт выдачи:</TextBlock>
+            <TextBlock FontSize="36" Name="placeTB"/>
+            <TextBlock FontSize="26">Код для получения заказа:</TextBlock>
+            <TextBlock FontSize="36" Name="codeTB"/>
+            <TextBlock FontSize="26">Состав заказа:</TextBlock>
+            <TextBlock FontSize="16" Name="itemsTB"/>
+
+            <Button x:Name="closeBtn" Click="closeBtnClick" Content="Закрыть" FontSize="20" Width="150"/>
+        </StackPanel>
+    </Grid>
+</Window>

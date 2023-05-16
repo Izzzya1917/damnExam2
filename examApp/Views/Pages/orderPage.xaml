@@ -31,6 +31,7 @@
         </ListView>
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <Button x:Name="buyBtn" Click="buyBtnClick" Content="оформить"/>
+            <TextBlock x:Name="orderSumTB" Text="Сумма заказа: "/>
         </StackPanel>
     </Grid>
 </Page>

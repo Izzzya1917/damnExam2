@@ -43,6 +43,7 @@
           <Property Name="orderDate" Type="datetime" />
           <Property Name="orderCode" Type="int" />
           <Property Name="orderDelievery" Type="int" />
+          <Property Name="orderPrice" Type="int" />
         </EntityType>
         <EntityType Name="orderStatuses">
           <Key>
@@ -242,6 +243,7 @@
           <NavigationProperty Name="orderGiveaway" Relationship="Self.FK_Orders_orderGiveaway" FromRole="Orders" ToRole="orderGiveaway" />
           <NavigationProperty Name="orderStatuses" Relationship="Self.FK_Orders_orderStatuses" FromRole="Orders" ToRole="orderStatuses" />
           <NavigationProperty Name="SoldItems" Relationship="Self.FK_SoldItems_Orders" FromRole="Orders" ToRole="SoldItems" />
+          <Property Name="orderPrice" Type="Int32" />
         </EntityType>
         <EntityType Name="orderStatuses">
           <Key>
@@ -437,6 +439,7 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="ExamDBModel.Orders">
               <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="orderPrice" ColumnName="orderPrice" />
                 <ScalarProperty Name="orderId" ColumnName="orderId" />
                 <ScalarProperty Name="orderStatusId" ColumnName="orderStatusId" />
                 <ScalarProperty Name="orderPlaceId" ColumnName="orderPlaceId" />

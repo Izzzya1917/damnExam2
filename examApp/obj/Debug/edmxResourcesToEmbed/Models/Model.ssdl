@@ -38,6 +38,7 @@
     <Property Name="orderDate" Type="datetime" />
     <Property Name="orderCode" Type="int" />
     <Property Name="orderDelievery" Type="int" />
+    <Property Name="orderPrice" Type="int" />
   </EntityType>
   <EntityType Name="orderStatuses">
     <Key>

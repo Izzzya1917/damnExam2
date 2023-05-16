@@ -19,6 +19,7 @@ namespace examApp
         public static Users CurrentUser = null;
         public static List<Items> orderList = new List<Items>();
         public static int orderPlaceId =0;
+        public static Orders lastOrder = null;
 
 
     }

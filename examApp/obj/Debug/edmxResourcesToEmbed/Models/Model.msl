@@ -35,6 +35,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="ExamDBModel.Orders">
         <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="orderPrice" ColumnName="orderPrice" />
           <ScalarProperty Name="orderId" ColumnName="orderId" />
           <ScalarProperty Name="orderStatusId" ColumnName="orderStatusId" />
           <ScalarProperty Name="orderPlaceId" ColumnName="orderPlaceId" />

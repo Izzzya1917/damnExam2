@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using examApp.Views.Windows;
+using System.Diagnostics;
 
 namespace examApp.Views.Pages
 {
@@ -21,7 +22,13 @@ namespace examApp.Views.Pages
             orderListView.ItemsSource = App.orderList;
             int orderNum = generateOrderNum();
             orderTB.Text+= orderNum;
-            
+            int price = 0;
+            foreach (var item in App.orderList)
+            {
+                 price += Convert.ToInt32( item.itemPrice);
+                
+            }
+            orderSumTB.Text += price + " рублей";
         }
 
         private void removeBtnClick(object sender, RoutedEventArgs e)
@@ -39,6 +46,8 @@ namespace examApp.Views.Pages
             postOrder();
             postSoldItems();
 
+            talonWindow talonWindow = new talonWindow();
+            talonWindow.ShowDialog();
             
         }
 
@@ -54,6 +63,12 @@ namespace examApp.Views.Pages
                 }
                 else delievery = 3;
             }
+            int price = 0;
+            foreach (var item in App.orderList)
+            {
+                price += Convert.ToInt32(item.itemPrice);
+
+            }
             Orders newOrder = new Orders()
             {
                 orderId = generateOrderNum(),
@@ -61,11 +76,13 @@ namespace examApp.Views.Pages
                 orderPlaceId = App.orderPlaceId,
                 orderDate = DateTime.Now,
                 orderCode = generateOrderCode(),
-                orderDelievery = delievery
+                orderDelievery = delievery,
+                orderPrice = price
             };
+            App.lastOrder = newOrder;
             db.context.Orders.Add(newOrder);
             db.context.SaveChanges();
-            MessageBox.Show("order posted!");
+         //   MessageBox.Show("order posted!");
         }
 
         private void postSoldItems()
@@ -79,7 +96,7 @@ namespace examApp.Views.Pages
                 };
                 db.context.SoldItems.Add(newItem);
                 db.context.SaveChanges();
-                MessageBox.Show("items sold!");
+                //MessageBox.Show("items sold!");
             }
         }
 

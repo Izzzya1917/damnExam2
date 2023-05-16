@@ -45,6 +45,7 @@
     <NavigationProperty Name="orderGiveaway" Relationship="Self.FK_Orders_orderGiveaway" FromRole="Orders" ToRole="orderGiveaway" />
     <NavigationProperty Name="orderStatuses" Relationship="Self.FK_Orders_orderStatuses" FromRole="Orders" ToRole="orderStatuses" />
     <NavigationProperty Name="SoldItems" Relationship="Self.FK_SoldItems_Orders" FromRole="Orders" ToRole="SoldItems" />
+    <Property Name="orderPrice" Type="Int32" />
   </EntityType>
   <EntityType Name="orderStatuses">
     <Key>

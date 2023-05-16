@@ -26,3 +26,5 @@ C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\orderPage.g.
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Pages\orderPage.baml
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Windows\orderPlaceWindow.g.cs
 C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Windows\orderPlaceWindow.baml
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Windows\talonWindow.g.cs
+C:\Users\anast\source\repos\damnExam2\examApp\obj\Debug\Views\Windows\talonWindow.baml
