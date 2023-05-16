@@ -29,6 +29,11 @@ namespace examApp.Views.Pages
             InitializeComponent();
             arrayItems = db.context.Items.ToList();
             CatalogListView.ItemsSource = arrayItems;
+            if (App.orderList.Count > 0 )
+            {
+                orderBtn.Visibility = Visibility.Visible;
+            } else
+            orderBtn.Visibility = Visibility.Hidden;
         }
 
 
@@ -36,6 +41,7 @@ namespace examApp.Views.Pages
         {
             Items selectedItem = (Items)((Button)sender).DataContext;
             App.orderList.Add(selectedItem);
+            orderBtn.Visibility = Visibility.Visible;
         }
 
         private void orderBtnClick(object sender, RoutedEventArgs e)

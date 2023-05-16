@@ -2,17 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using examApp.Views.Windows;
 
 namespace examApp.Views.Pages
@@ -28,7 +19,8 @@ namespace examApp.Views.Pages
         {
             InitializeComponent();
             orderListView.ItemsSource = App.orderList;
-            orderTB.Text+=generateOrderNum();
+            int orderNum = generateOrderNum();
+            orderTB.Text+= orderNum;
             
         }
 
@@ -42,21 +34,53 @@ namespace examApp.Views.Pages
         private void buyBtnClick(object sender, RoutedEventArgs e)
         {
             orderPlaceWindow orderPlaceWindow = new orderPlaceWindow();
-
             orderPlaceWindow.ShowDialog();
-            /*
-            Orders newOrder= new Orders()
+
+            postOrder();
+            postSoldItems();
+
+            
+        }
+
+        private void postOrder()
+        {
+            int delievery = 6;
+            foreach (Items item in App.orderList)
+            {
+                if (item.itemCount < 3)
                 {
-                    orderId = generateOrderNum(),
-                    orderStatusId = 1,
-                    orderPlaceId = 1,
-                    orderDate = DateTime.Now,
-                    orderCode = generateOrderCode(),
-                    orderDelievery = 1
+                    delievery = 6;
+                    break;
+                }
+                else delievery = 3;
+            }
+            Orders newOrder = new Orders()
+            {
+                orderId = generateOrderNum(),
+                orderStatusId = 1,
+                orderPlaceId = App.orderPlaceId,
+                orderDate = DateTime.Now,
+                orderCode = generateOrderCode(),
+                orderDelievery = delievery
+            };
+            db.context.Orders.Add(newOrder);
+            db.context.SaveChanges();
+            MessageBox.Show("order posted!");
+        }
+
+        private void postSoldItems()
+        {
+            foreach (Items item in App.orderList)
+            {
+                SoldItems newItem = new SoldItems()
+                {
+                 itemId = item.itemId,
+                 orderId = generateOrderNum()-1
                 };
-                db.context.Orders.Add(newOrder);
+                db.context.SoldItems.Add(newItem);
                 db.context.SaveChanges();
-            MessageBox.Show("Заказ оформлен!");*/
+                MessageBox.Show("items sold!");
+            }
         }
 
         private int generateOrderNum () {
