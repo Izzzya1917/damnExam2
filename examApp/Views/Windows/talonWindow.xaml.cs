@@ -38,6 +38,10 @@ namespace examApp.Views.Windows
 
         private void closeBtnClick(object sender, RoutedEventArgs e)
         {
+            App.lastOrder = null;
+            App.orderList .Clear();
+            App.CurrentUser = null;
+            App.orderPlaceId = 0;
             this.Close();
         }
     }

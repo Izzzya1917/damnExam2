@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:examApp.Views.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="orderPage">
+      Title="Заказ">
 
     <Grid>
         <Grid.RowDefinitions>
